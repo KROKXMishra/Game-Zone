@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>2048 Arena</title>
+    <title>Game Zone Hub</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
 </head>
@@ -15,38 +15,19 @@
 
     <div class="glass-container">
         <header>
-            <p class="subtitle">Logic Arena</p>
-            <h1>2048</h1>
+            <p class="subtitle">Select Arena</p>
+            <h1>Game Zone</h1>
         </header>
 
-        <div class="score-container">
-            <div class="score-box">
-                <p>SCORE</p>
-                <span id="score">0</span>
-            </div>
-            <div class="score-box">
-                <p>BEST</p>
-                <span id="best-score">0</span>
-            </div>
-        </div>
-
-        <div class="grid" id="grid">
-            </div>
-
-        <div class="controls">
-            <button id="reset-btn" onclick="startGame()">New Game</button>
-        </div>
-
-        <div class="nav-container">
-            <a href="../index.html" class="return-btn">Back to Hub</a>
-        </div>
+        <nav class="menu">
+            <a href="chess/index.html">Chess Arena</a>
+            <a href="ttt/index.html">Tic Tac Toe</a>
+            <a href="rps/index.html">Rock Paper Scissors</a>
+            <a href="sudoku/index.html">Sudoku Solver</a>
+            <a href="2048/index.html">2048 Arena</a>
+        </nav>
     </div>
-
-    <div id="game-over" class="overlay hide">
-        <h2 id="over-msg">Game Over!</h2>
-        <button class="retry-btn" onclick="startGame()">Try Again</button>
-    </div>
-
-    <script src="app.js"></script>
+    
+    <script src="script.js"></script>
 </body>
 </html>

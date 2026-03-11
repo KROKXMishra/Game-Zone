@@ -1,0 +1,168 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    /* Deep space radial gradient matching Chess Arena */
+    background: #0a0a1a;
+    background: radial-gradient(circle at center, #1a1a3a 0%, #0a0a1a 100%);
+    min-height: 100vh;
+    color: white;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* --- BACKGROUND DECOR --- */
+.background-decor .circle {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+    z-index: -1;
+}
+
+.circle-1 { 
+    width: 350px; height: 350px; 
+    top: -5%; left: -5%; 
+    background: rgba(0, 212, 255, 0.15); 
+}
+
+.circle-2 { 
+    width: 450px; height: 450px; 
+    bottom: -10%; right: -5%; 
+    background: rgba(186, 104, 255, 0.1); 
+}
+
+/* --- HEADER --- */
+h1 {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    line-height: 5rem;
+    font-size: 2.2rem;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+/* --- CHOICES SECTION --- */
+.choices {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    margin-top: 3.5rem;
+}
+
+.choice {
+    height: 160px;
+    width: 160px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    cursor: pointer;
+    transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.choice:hover {
+    background: rgba(0, 212, 255, 0.1);
+    transform: scale(1.1);
+    border: 1px solid rgba(0, 212, 255, 0.6);
+    box-shadow: 0 0 30px rgba(0, 212, 255, 0.4), 
+                inset 0 0 15px rgba(0, 212, 255, 0.2);
+}
+
+.choice img {
+    height: 110px;
+    width: 110px;
+    border-radius: 50%;
+    object-fit: cover;
+    filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.2));
+}
+
+/* --- SCORE BOARD --- */
+.score-board {
+    margin-top: 3rem;
+    display: flex;
+    justify-content: center;
+    gap: 6rem;
+}
+
+.score img {
+    height: 60px;
+    width: 60px;
+    margin-top: 10px;
+    filter: grayscale(0.5) opacity(0.8);
+}
+
+#user-score, 
+#comp-score {
+    font-size: 4rem;
+    font-weight: 700;
+}
+
+#user-score {
+    color: #ffffff;
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+}
+
+#comp-score {
+    color: #00d4ff;
+    text-shadow: 0 0 15px rgba(0, 212, 255, 0.6);
+}
+
+/* --- MESSAGE BOX --- */
+.message-container {
+    margin-top: 2.5rem;
+}
+
+#msg {
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(15px);
+    padding: 1rem 2.5rem;
+    border-radius: 50px;
+    display: inline-block;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    transition: 0.3s ease;
+}
+
+/* --- NAVIGATION BUTTON --- */
+.nav-container {
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+}
+
+.return-btn {
+    text-decoration: none;
+    color: #00d4ff;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.85rem;
+    padding: 12px 30px;
+    border: 1px solid rgba(0, 212, 255, 0.3);
+    border-radius: 8px;
+    transition: 0.3s;
+    display: inline-block;
+    background: rgba(0, 212, 255, 0.05);
+}
+
+.return-btn:hover {
+    background: rgba(0, 212, 255, 0.15);
+    box-shadow: 0 0 20px rgba(0, 212, 255, 0.4);
+    transform: translateY(-3px);
+}
